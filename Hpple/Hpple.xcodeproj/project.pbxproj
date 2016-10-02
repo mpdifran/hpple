@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		FF1037DB1DA15485002176DB /* Hpple.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1037D91DA15485002176DB /* Hpple.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF1037E81DA154A2002176DB /* TFHpple.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1037E21DA154A2002176DB /* TFHpple.h */; };
+		FF1037E81DA154A2002176DB /* TFHpple.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1037E21DA154A2002176DB /* TFHpple.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF1037E91DA154A2002176DB /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1037E31DA154A2002176DB /* TFHpple.m */; };
-		FF1037EA1DA154A2002176DB /* TFHppleElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1037E41DA154A2002176DB /* TFHppleElement.h */; };
+		FF1037EA1DA154A2002176DB /* TFHppleElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1037E41DA154A2002176DB /* TFHppleElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF1037EB1DA154A2002176DB /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1037E51DA154A2002176DB /* TFHppleElement.m */; };
-		FF1037EC1DA154A2002176DB /* XPathQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1037E61DA154A2002176DB /* XPathQuery.h */; };
+		FF1037EC1DA154A2002176DB /* XPathQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1037E61DA154A2002176DB /* XPathQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF1037ED1DA154A2002176DB /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1037E71DA154A2002176DB /* XPathQuery.m */; };
 		FF1037F01DA1558D002176DB /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1037EF1DA1558D002176DB /* libxml2.2.dylib */; };
 /* End PBXBuildFile section */
@@ -285,7 +285,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SRCROOT)/../Pod/Classes/",
+				);
 				INFOPLIST_FILE = Hpple/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -303,7 +306,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(SRCROOT)/../Pod/Classes/",
+				);
 				INFOPLIST_FILE = Hpple/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -332,6 +338,7 @@
 				FF1037E01DA15485002176DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
